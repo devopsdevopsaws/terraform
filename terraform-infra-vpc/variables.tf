@@ -41,3 +41,44 @@ variable "database_subnet_cidr" {
     default = ["10.0.21.0/24","10.0.22.0/24"]    
 }
 
+variable "sg_name" {
+    default = "allow_all"  
+}
+
+variable "sg_description" {
+    default = "Allow all ports to the security group"  
+}
+
+variable "sg_ingress_rules" {
+    default = [
+        {
+            from_port = 0
+            to_port = 0
+            protocol = "-1"
+            description = "allowing all traffic from internet"
+            cidr_blocks = ["0.0.0.0/0"]
+        }
+    ]  
+}
+
+variable "instances" {
+  default = {
+    MongoDB = "t3.micro"
+    MySQL = "t3.micro"
+    Redis = "t2.micro"
+    RabbitMQ = "t2.micro"
+    Catalogue = "t2.micro"
+    User = "t2.micro"
+    Cart = "t2.micro"
+    Shipping = "t2.micro"
+    Payment = "t2.micro"
+    Web = "t2.micro"
+  }
+}
+
+variable "zone_name" {
+  default = "padmasrikanth.shop"
+}
+
+
+

@@ -21,3 +21,11 @@ output "database_subnet_ids" {
 output "natgw_id" {
     value = local.natgw_id  
 }
+
+output "sg_id" {
+    value = local.sg_id  
+}
+
+output "ami_id" {
+    value = local.ami  
+}
