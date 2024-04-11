@@ -14,7 +14,7 @@ variable "common_tags" {
 }
 
 variable "project_name" {
-    default = "ROBOSHOP"
+    default = "roboshop"
 }
 
 variable "vpc_tags" {

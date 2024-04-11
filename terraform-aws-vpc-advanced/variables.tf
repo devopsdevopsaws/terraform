@@ -56,5 +56,25 @@ variable "natgw_tags" {
     }  
 }
 
+variable "requestor_vpc_id" {
+  
+}
+
+variable "env" {
+  
+}
+
+variable "is_peering_required" {
+  default = false
+}
+
+variable "default_route_table_id" {
+  
+}
+
+variable "default_vpc_cidr" {
+  
+}
+
 
 
